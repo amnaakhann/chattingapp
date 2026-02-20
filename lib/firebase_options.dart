@@ -5,9 +5,7 @@ import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
-<<<<<<< HEAD
 
-=======
 ///
 /// Example:
 /// ```dart
@@ -17,7 +15,6 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -46,29 +43,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBh6X2vfm0O5voAPlMXYR1IXjDYZhDSLVU',
-<<<<<<< HEAD
     appId: '1:139903145543:web:55adc9c7cda8890e5f8362',
-=======
-    appId: '1:139903145543:web:59dc6204cdcf985c5f8362',
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
     messagingSenderId: '139903145543',
     projectId: 'chatapp-4ac4a',
     authDomain: 'chatapp-4ac4a.firebaseapp.com',
     storageBucket: 'chatapp-4ac4a.firebasestorage.app',
-<<<<<<< HEAD
     measurementId: 'G-TZ21JBR7XH',
-=======
-    measurementId: 'G-PLS625H2VG',
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA_SlL0bpAOsE9hMb9eV-pxoOYdvsf0F9w',
-<<<<<<< HEAD
-    appId: '1:139903145543:android:fca6aba7f77b9ed85f8362',
-=======
     appId: '1:139903145543:android:fa82384297b964085f8362',
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
     messagingSenderId: '139903145543',
     projectId: 'chatapp-4ac4a',
     storageBucket: 'chatapp-4ac4a.firebasestorage.app',
@@ -76,35 +61,15 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyB9poD2-D8ZEPTZDr702aJ6oWycL5x9LqQ',
-<<<<<<< HEAD
-    appId: '1:139903145543:ios:a28c033fb6679c285f8362',
-    messagingSenderId: '139903145543',
-    projectId: 'chatapp-4ac4a',
-    storageBucket: 'chatapp-4ac4a.firebasestorage.app',
-    iosBundleId: 'com.example.chattingApp1',
-=======
     appId: '1:139903145543:ios:b21749b31206b4555f8362',
     messagingSenderId: '139903145543',
     projectId: 'chatapp-4ac4a',
     storageBucket: 'chatapp-4ac4a.firebasestorage.app',
     iosBundleId: 'com.example.chattingApp',
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyB9poD2-D8ZEPTZDr702aJ6oWycL5x9LqQ',
-<<<<<<< HEAD
-    appId: '1:139903145543:ios:a28c033fb6679c285f8362',
-    messagingSenderId: '139903145543',
-    projectId: 'chatapp-4ac4a',
-    storageBucket: 'chatapp-4ac4a.firebasestorage.app',
-    iosBundleId: 'com.example.chattingApp1',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDVQp1vMst086IBs-Mnd9yXk1Za6RyQWyc',
-    appId: '1:139903145543:web:cbf526fb961be1465f8362',
-=======
     appId: '1:139903145543:ios:b21749b31206b4555f8362',
     messagingSenderId: '139903145543',
     projectId: 'chatapp-4ac4a',
@@ -115,18 +80,10 @@ class DefaultFirebaseOptions {
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyBh6X2vfm0O5voAPlMXYR1IXjDYZhDSLVU',
     appId: '1:139903145543:web:55adc9c7cda8890e5f8362',
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
     messagingSenderId: '139903145543',
     projectId: 'chatapp-4ac4a',
     authDomain: 'chatapp-4ac4a.firebaseapp.com',
     storageBucket: 'chatapp-4ac4a.firebasestorage.app',
-<<<<<<< HEAD
-    measurementId: 'G-8C00L46VVJ',
-  );
-
-}
-=======
     measurementId: 'G-TZ21JBR7XH',
   );
 }
->>>>>>> b916ab414ac3465d07de8c69e746c3098344149b

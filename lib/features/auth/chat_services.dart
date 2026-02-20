@@ -1,4 +1,4 @@
-import 'package:chatting_app/models/message.dart';
+import 'package:chatting_app1/features/auth/message.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -8,8 +8,10 @@ class ChatService {
   Stream<List<Map<String, dynamic>>> getUsersStream() {
     return _firestore.collection("Users").snapshots().map((snapshot) {
       return snapshot.docs.map((doc) {
-        final user = doc.data();
-        return user;
+        // Firestore doc.data() returns Map<String, dynamic> for documents
+        final Map<String, dynamic> data = Map<String, dynamic>.from(doc.data());
+        // ensure the returned map always contains the document id as 'uid'
+        return {'uid': doc.id, ...data};
       }).toList();
     });
   }
@@ -22,11 +24,12 @@ class ChatService {
     final Timestamp timestamp = Timestamp.now();
     //create a new message
     Message newMessage = Message(
-        senderid: currentUserId,
-        message: message,
-        senderemail: currentUserEmail,
-        receiverid: receiverId,
-        timestamp: timestamp);
+      senderid: currentUserId,
+      message: message,
+      senderemail: currentUserEmail,
+      receiverid: receiverId,
+      timestamp: timestamp,
+    );
     //construct chat roon id
     List<String> ids = [currentUserId, receiverId];
     ids.sort(); //sort the ids that ensure that the 2 people have same chatroomid

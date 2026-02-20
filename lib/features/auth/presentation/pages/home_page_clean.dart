@@ -5,7 +5,7 @@ class HomePageClean extends StatelessWidget {
   final UserEntity? user;
   final VoidCallback onSignOut;
 
-  const HomePageClean({Key? key, this.user, required this.onSignOut}) : super(key: key);
+  const HomePageClean({super.key, this.user, required this.onSignOut});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,12 @@ class HomePageClean extends StatelessWidget {
                 accountName: Text(user?.displayName ?? 'Guest'),
                 accountEmail: Text(user?.email ?? ''),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: user?.photoUrl != null ? NetworkImage(user!.photoUrl!) : null,
-                  child: user?.photoUrl == null ? const Icon(Icons.person) : null,
+                  backgroundImage: user?.photoUrl != null
+                      ? NetworkImage(user!.photoUrl!)
+                      : null,
+                  child: user?.photoUrl == null
+                      ? const Icon(Icons.person)
+                      : null,
                 ),
               ),
               ListTile(
@@ -51,11 +55,18 @@ class HomePageClean extends StatelessWidget {
                 const SizedBox(height: 16),
                 CircleAvatar(
                   radius: 36,
-                  backgroundImage: user?.photoUrl != null ? NetworkImage(user!.photoUrl!) : null,
-                  child: user?.photoUrl == null ? const Icon(Icons.person, size: 36) : null,
+                  backgroundImage: user?.photoUrl != null
+                      ? NetworkImage(user!.photoUrl!)
+                      : null,
+                  child: user?.photoUrl == null
+                      ? const Icon(Icons.person, size: 36)
+                      : null,
                 ),
                 const SizedBox(height: 8),
-                Text(user?.displayName ?? 'Guest', style: const TextStyle(fontWeight: FontWeight.bold)),
+                Text(
+                  user?.displayName ?? 'Guest',
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
                 const SizedBox(height: 16),
                 const Divider(),
                 const ListTile(
@@ -73,7 +84,7 @@ class HomePageClean extends StatelessWidget {
                       onTap: () {},
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -85,7 +96,10 @@ class HomePageClean extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   alignment: Alignment.centerLeft,
-                  child: const Text('Chats', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  child: const Text(
+                    'Chats',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Expanded(
                   child: ListView.builder(
@@ -99,18 +113,30 @@ class HomePageClean extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 8,
+                  ),
                   color: Theme.of(context).scaffoldBackgroundColor,
                   child: Row(
                     children: [
-                      Expanded(child: TextField(decoration: InputDecoration(hintText: 'Type a message'))),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.send, color: Colors.blue)),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Type a message',
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.send, color: Colors.blue),
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

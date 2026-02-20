@@ -25,23 +25,40 @@ class MyDrawer extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               radius: 28,
               backgroundColor: Theme.of(context).colorScheme.primary,
-              backgroundImage: user?.photoUrl != null && user!.photoUrl!.isNotEmpty ? NetworkImage(user.photoUrl!) : null,
+              backgroundImage:
+                  user?.photoUrl != null && user!.photoUrl!.isNotEmpty
+                  ? NetworkImage(user.photoUrl!)
+                  : null,
               child: user?.photoUrl == null || (user?.photoUrl ?? '').isEmpty
-                  ? Text(displayName.isNotEmpty ? displayName[0].toUpperCase() : '?', style: const TextStyle(color: Colors.white))
+                  ? Text(
+                      displayName.isNotEmpty
+                          ? displayName[0].toUpperCase()
+                          : '?',
+                      style: const TextStyle(color: Colors.white),
+                    )
                   : null,
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home, color: Theme.of(context).colorScheme.primary),
+            leading: Icon(
+              Icons.home,
+              color: Theme.of(context).colorScheme.primary,
+            ),
             title: const Text('Home'),
             onTap: () => Navigator.pop(context),
           ),
           ListTile(
-            leading: Icon(Icons.settings, color: Theme.of(context).colorScheme.primary),
+            leading: Icon(
+              Icons.settings,
+              color: Theme.of(context).colorScheme.primary,
+            ),
             title: const Text('Settings'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Settingpage()));
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Settingpage()),
+              );
             },
           ),
           const Spacer(),
@@ -49,7 +66,10 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
             child: Row(
               children: [
-                Icon(Icons.logout, color: Theme.of(context).colorScheme.primary),
+                Icon(
+                  Icons.logout,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: GestureDetector(
@@ -69,10 +89,10 @@ class MyDrawer extends StatelessWidget {
                       onChanged: (v) => tp.toggletheme(),
                     );
                   },
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

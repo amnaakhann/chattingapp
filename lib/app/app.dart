@@ -7,7 +7,11 @@ class MyApp extends StatelessWidget {
   final Widget home;
   final ThemeMode themeMode;
 
-  const MyApp({Key? key, required this.home, this.themeMode = ThemeMode.system}) : super(key: key);
+  const MyApp({
+    super.key,
+    required this.home,
+    this.themeMode = ThemeMode.system,
+  });
 
   @override
   Widget build(BuildContext context) {

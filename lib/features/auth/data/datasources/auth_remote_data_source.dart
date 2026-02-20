@@ -13,7 +13,10 @@ class FirebaseAuthRemoteDataSource implements AuthRemoteDataSource {
   final fb.FirebaseAuth firebaseAuth;
   final GoogleSignIn googleSignIn;
 
-  FirebaseAuthRemoteDataSource({required this.firebaseAuth, required this.googleSignIn});
+  FirebaseAuthRemoteDataSource({
+    required this.firebaseAuth,
+    required this.googleSignIn,
+  });
 
   @override
   Future<UserModel?> getCurrentUser() async {
@@ -41,7 +44,12 @@ class FirebaseAuthRemoteDataSource implements AuthRemoteDataSource {
 
     final userCredential = await firebaseAuth.signInWithCredential(credential);
     final u = userCredential.user!;
-    return UserModel(uid: u.uid, displayName: u.displayName, email: u.email, photoUrl: u.photoURL);
+    return UserModel(
+      uid: u.uid,
+      displayName: u.displayName,
+      email: u.email,
+      photoUrl: u.photoURL,
+    );
   }
 
   @override

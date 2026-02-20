@@ -11,7 +11,11 @@ class AuthState {
   AuthState({this.user, this.loading = false, this.error});
 
   AuthState copyWith({UserEntity? user, bool? loading, String? error}) {
-    return AuthState(user: user ?? this.user, loading: loading ?? this.loading, error: error ?? this.error);
+    return AuthState(
+      user: user ?? this.user,
+      loading: loading ?? this.loading,
+      error: error ?? this.error,
+    );
   }
 }
 

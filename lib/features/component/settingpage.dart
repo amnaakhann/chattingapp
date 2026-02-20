@@ -18,8 +18,9 @@ class Settingpage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.secondary,
-            borderRadius: BorderRadius.circular(12)),
+          color: Theme.of(context).colorScheme.secondary,
+          borderRadius: BorderRadius.circular(12),
+        ),
         margin: EdgeInsets.all(25),
         padding: EdgeInsets.all(16),
         child: Row(
@@ -29,10 +30,12 @@ class Settingpage extends StatelessWidget {
             Text("Dark Mode"),
             //switch toggle
             CupertinoSwitch(
-                value: Provider.of<ThemeProvider>(context).isdarkmode,
-                onChanged: (value) =>
-                    Provider.of<ThemeProvider>(context, listen: false)
-                        .toggletheme())
+              value: Provider.of<ThemeProvider>(context).isdarkmode,
+              onChanged: (value) => Provider.of<ThemeProvider>(
+                context,
+                listen: false,
+              ).toggletheme(),
+            ),
           ],
         ),
       ),

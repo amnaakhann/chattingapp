@@ -21,7 +21,10 @@ class UserTiles extends StatelessWidget {
           ),
           title: Text(text, style: TextStyle(fontWeight: FontWeight.w600)),
           subtitle: const Text('Tap to open chat'),
-          trailing: Icon(Icons.chevron_right, color: Theme.of(context).colorScheme.primary),
+          trailing: Icon(
+            Icons.chevron_right,
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
       ),
     );

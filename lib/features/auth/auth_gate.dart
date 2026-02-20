@@ -1,4 +1,4 @@
-import 'package:chatting_app1/models/services/auth/login_or_register.dart';
+import 'package:chatting_app1/features/auth/login_or_register.dart';
 import 'package:chatting_app1/app/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

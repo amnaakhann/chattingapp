@@ -6,12 +6,13 @@ class Message {
   final String receiverid;
   final String message;
   final Timestamp timestamp;
-  Message(
-      {required this.senderid,
-      required this.message,
-      required this.senderemail,
-      required this.receiverid,
-      required this.timestamp});
+  Message({
+    required this.senderid,
+    required this.message,
+    required this.senderemail,
+    required this.receiverid,
+    required this.timestamp,
+  });
   //convert into map
   Map<String, dynamic> tomap() {
     return {
@@ -19,7 +20,7 @@ class Message {
       'senderemail': senderemail,
       'receiver': receiverid,
       'messages': message,
-      'timestamp': timestamp
+      'timestamp': timestamp,
     };
   }
 }

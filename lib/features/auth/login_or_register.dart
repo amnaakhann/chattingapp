@@ -1,6 +1,6 @@
-import 'package:chatting_app/login_page.dart';
-import 'package:chatting_app/register_page.dart';
 import 'package:flutter/material.dart';
+import '../../app/login_page.dart';
+import '../../app/register_page.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});
@@ -20,13 +20,9 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
   @override
   Widget build(BuildContext context) {
     if (showLoginpage) {
-      return LoginPage(
-        ontap: togglePages,
-      );
+      return LoginPage(ontap: togglePages);
     } else {
-      return RegisterPage(
-        ontap: togglePages,
-      );
+      return RegisterPage(ontap: togglePages);
     }
   }
 }
