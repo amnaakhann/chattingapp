@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # chatting_app1
+=======
+# chatting_app
+>>>>>>> b916ab414ac3465d07de8c69e746c3098344149b
 
 A new Flutter project.
 
